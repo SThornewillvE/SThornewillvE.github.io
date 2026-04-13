@@ -145,11 +145,27 @@
   p:last-child { margin-bottom: 0; }
 
   /* Skills */
+  .skills-group {
+    margin-top: 1.2rem;
+  }
+
+  .skills-group + .skills-group {
+    margin-top: 1rem;
+  }
+
+  .skills-group-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+
   .skills {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 1.2rem;
   }
 
   .skill {
@@ -299,17 +315,68 @@
   </section>
 
   <section>
-    <p class="section-label">Core Skills</p>
-    <div class="skills">
-      <span class="skill">Python</span>
-      <span class="skill">R</span>
-      <span class="skill">SQL</span>
-      <span class="skill">Causal Inference</span>
-      <span class="skill">Bayesian Statistics</span>
-      <span class="skill">A/B Testing</span>
-      <span class="skill">Experiment Design</span>
-      <span class="skill">Stakeholder Management</span>
-      <span class="skill">Mentoring</span>
+    <p class="section-label">Skills</p>
+
+    <div class="skills-group">
+      <p class="skills-group-label">Programming & Data Engineering</p>
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">R</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Numpy</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">PyMC</span>
+        <span class="skill">Airflow</span>
+        <span class="skill">ETL</span>
+        <span class="skill">Data Pipelines</span>
+        <span class="skill">Model Deployment</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <p class="skills-group-label">ML & Statistics</p>
+      <div class="skills">
+        <span class="skill">Machine Learning</span>
+        <span class="skill">Bayesian Statistics</span>
+        <span class="skill">Causal Inference</span>
+        <span class="skill">A/B Testing</span>
+        <span class="skill">Experiment Design</span>
+        <span class="skill">Regression</span>
+        <span class="skill">Simulation</span>
+        <span class="skill">Optimisation</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <p class="skills-group-label">Visualisation & Data Stack</p>
+      <div class="skills">
+        <span class="skill">Looker</span>
+        <span class="skill">Tableau</span>
+        <span class="skill">Dashboarding</span>
+        <span class="skill">Data Storytelling</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <p class="skills-group-label">AI & LLM Tooling</p>
+      <div class="skills">
+        <span class="skill">LLM Engineering</span>
+        <span class="skill">LLM Integration</span>
+        <span class="skill">Prompt Engineering</span>
+        <span class="skill">AI-Assisted Development</span>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <p class="skills-group-label">Professional</p>
+      <div class="skills">
+        <span class="skill">Stakeholder Management</span>
+        <span class="skill">Mentoring</span>
+        <span class="skill">Communication</span>
+        <span class="skill">Cross-Org Collaboration</span>
+        <span class="skill">Product Thinking</span>
+        <span class="skill">Project Scoping</span>
+      </div>
     </div>
   </section>
 
