@@ -110,8 +110,8 @@
   }
 
   nav a:hover {
-    background: var(--ink);
-    color: var(--paper);
+    border-color: var(--accent);
+    color: var(--accent);
   }
 
   /* Sections */
@@ -178,10 +178,7 @@
     transition: border-color 0.15s, color 0.15s;
   }
 
-  .skill:hover {
-    border-color: var(--ink-faint);
-    color: var(--ink);
-  }
+  .skill { cursor: default; }
 
   /* Writing */
   .article-list {
