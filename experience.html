@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience — Simon Thornewill von Essen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a1a;
+    --ink-muted: #666;
+    --ink-faint: #999;
+    --paper: #f7f4ef;
+    --paper-warm: #ede9e1;
+    --accent: #c0392b;
+    --accent-light: #f9ebe9;
+    --mono: 'DM Mono', monospace;
+    --serif: 'DM Serif Display', serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  header {
+    padding: 4rem 0 2rem;
+    border-bottom: 1px solid var(--paper-warm);
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.4rem;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.8rem;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--ink);
+    transition: background 0.15s, color 0.15s;
+  }
+
+  nav a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  section {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--paper-warm);
+    animation: fadeUp 0.6s ease both;
+  }
+
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.2s; }
+
+  .section-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+  }
+
+  /* Experience entries */
+  .experience-entry {
+    margin-bottom: 3rem;
+  }
+
+  .experience-entry:last-child {
+    margin-bottom: 0;
+  }
+
+  .experience-header {
+    margin-bottom: 1.2rem;
+  }
+
+  .experience-company {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+  }
+
+  .experience-meta {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--ink-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1rem;
+  }
+
+  .experience-role {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  .impact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .impact-list li {
+    padding: 0.8rem 1rem;
+    background: var(--paper-warm);
+    border-left: 2px solid var(--accent);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .impact-label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.7rem;
+    margin-top: 1.4rem;
+  }
+
+  footer {
+    padding: 2.5rem 0;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+
+  footer p {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.04em;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 480px) {
+    .container { padding: 0 1.25rem; }
+    header { padding: 2.5rem 0 1.5rem; }
+    section { padding: 2rem 0; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <p class="eyebrow">Professional Experience</p>
+    <h1>Simon<br><em>Thornewill von Essen</em></h1>
+    <nav>
+      <a href="index.html">← Back</a>
+      <a href="https://www.linkedin.com/in/sthornewillve/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/SThornewillvE/" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <section>
+    <p class="section-label">Experience</p>
+
+    <div class="experience-entry">
+      <div class="experience-header">
+        <p class="experience-company">Deliveroo</p>
+        <div class="experience-meta">
+          <span class="experience-role">Data Scientist II</span>
+          <span>London, UK</span>
+          <span>Feb 2021 – Present</span>
+        </div>
+      </div>
+
+      <p>At Deliveroo I've worked across two main areas: fraud and trust, and logistics and operations. In fraud, my work has centred on protecting the business from financial loss while keeping the customer experience intact, using causal inference and Bayesian modelling to cut through noisy signals and make high-stakes policy decisions on limited data.</p>
+
+      <p>On the logistics side, I've designed and analysed experiments on dispatcher algorithm features, contributing to improvements in delivery time and restaurant wait-time estimation. I've also worked across the full project lifecycle, from framing ambiguous problems with senior stakeholders to mentoring junior colleagues and delivering internal training to over 150 employees.</p>
+
+      <p class="impact-label">Highlights</p>
+      <ul class="impact-list">
+        <li>Blocked a <strong>£5M/year cost risk</strong> by designing an experiment that exposed a 3DS fraud algorithm's 100%+ chargeback increase, far outweighing its 0.5% order volume gain.</li>
+        <li>Reduced missing item order inaccuracy by <strong>~15%</strong> (projected saving of ~£500K/year) through a banner experiment that surfaced customer misunderstanding of who bears the cost of inaccuracy claims.</li>
+        <li>Delivered <strong>~£300K in short-term savings</strong> by revamping the top-customer fraud exemption policy, optimising across multiple outcomes during a period of rapidly rising costs.</li>
+        <li>Reframed team priorities using <strong>Bayesian modelling on camera-labelled data</strong>, showing missing item fraud was significantly over-estimated and freeing resources for higher-impact work.</li>
+        <li>Reduced average delivery times by <strong>~3 seconds per order</strong> by designing experiments to validate dispatcher algorithm features enabling dynamic route optimisation.</li>
+        <li>Reduced large-order misclassification by <strong>3.5%</strong> by validating an LLM-based classification model and running the production readiness experiment.</li>
+      </ul>
+    </div>
+
+    <div class="experience-entry">
+      <div class="experience-header">
+        <p class="experience-company">Goodgame Studios</p>
+        <div class="experience-meta">
+          <span class="experience-role">Data Scientist</span>
+          <span>Hamburg, DE</span>
+          <span>Aug 2018 – Jan 2021</span>
+        </div>
+      </div>
+
+      <p>At Goodgame Studios, a mobile gaming company, I worked embedded in the marketing team, helping turn it into a centre of excellence within the Stillfront group. My work spanned marketing analytics, A/B testing infrastructure, data quality monitoring, and stakeholder-facing reporting.</p>
+
+      <p>I built and maintained the dashboards and tooling that gave the team visibility into campaign performance and testing outcomes, and helped scale the team's influence to cover marketing for multiple group companies. I also maintained a cohort ROI forecasting model used to guide marketing spend decisions.</p>
+
+      <p class="impact-label">Highlights</p>
+      <ul class="impact-list">
+        <li>Supported the marketing team's rise to a <strong>centre of excellence</strong> within the Stillfront group by building and maintaining 10 Tableau dashboards covering A/B testing and multi-channel marketing performance.</li>
+        <li>Saved <strong>~1.5 hours of manual investigation per week</strong> and caught ~2 data quality issues weekly by building a Python automation tool that ran nightly checks and emailed alerts on dashboard divergences.</li>
+        <li>Enabled a smooth <strong>Flash-to-HTML5 engine rollout</strong> by aggregating and matching cross-platform metrics in an A/B testing dashboard, surfacing multiple bugs before full release.</li>
+        <li>Raised stakeholder awareness of A/B testing pitfalls by <strong>presenting on Bayesian statistics</strong> at a local data science meetup.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <p class="section-label">Education</p>
+
+    <div class="experience-entry">
+      <div class="experience-header">
+        <p class="experience-company">Udacity</p>
+        <div class="experience-meta">
+          <span class="experience-role">Data Science &amp; Data Analyst Nanodegree</span>
+          <span>Online</span>
+          <span>2017 – 2019</span>
+        </div>
+      </div>
+
+      <p>A pair of project-heavy nanodegrees covering the full data science workflow, from data wrangling and visualisation through to machine learning and big data. Projects spanned supervised learning, recommendation systems, neural networks, and large-scale feature engineering in Spark.</p>
+
+      <p class="impact-label">Projects</p>
+      <ul class="impact-list">
+        <li><strong>Image Classification Neural Network</strong> — developed and evaluated neural networks for image classification in PyTorch.</li>
+        <li><strong>Recommendation System for IBM Article Platform</strong> — rank-based and collaborative filtering methods with evaluation.</li>
+        <li><strong>Churn Prediction Using Spark</strong> — big data feature engineering and model evaluation at scale.</li>
+        <li><strong>Predicting Burn Areas for Forest Fires</strong> — regression with feature selection and hyperparameter tuning.</li>
+      </ul>
+    </div>
+
+    <div class="experience-entry">
+      <div class="experience-header">
+        <p class="experience-company">The University of Edinburgh</p>
+        <div class="experience-meta">
+          <span class="experience-role">MChem Chemistry</span>
+          <span>Edinburgh, UK</span>
+          <span>Sep 2012 – Apr 2017</span>
+        </div>
+      </div>
+
+      <p>An integrated master's in Chemistry, combining rigorous quantitative training, statistics, thermodynamics, computational modelling, with hands-on laboratory and research experience. The degree built strong foundations in experimental design, data analysis, and scientific communication that have transferred directly into data science work.</p>
+
+      <p class="impact-label">Projects</p>
+      <ul class="impact-list">
+        <li><strong>Final-Year Project: Sustainable Activation of Boronic Esters</strong>; literature review, experimental planning, and analysis.</li>
+        <li><strong>Systematic Review: Conversion of Cellulose to Biofuels and Chemical Feedstocks</strong>; evidence synthesis and scientific writing.</li>
+        <li><strong>Group Project: Computational Design of Novel Statins</strong>; molecular modelling using Autodock Vina.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Find me on Bluesky — <a href="https://bsky.app/profile/sthornewillve.bsky.social" style="color: inherit;">@sthornewillve.bsky.social</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
